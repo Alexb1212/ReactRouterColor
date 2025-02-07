@@ -1,17 +1,23 @@
 import { Routes, Route } from 'react-router-dom';
 
+import Blue from './Blue.jsx';
+import Red from './Red.jsx';
+import NavBar from './NavBar.jsx'
+
 
 const App = () => {
 
   return (
     <>
       <div id="container">
+        <NavBar/>
         <h1>Hello React Router!</h1>
-        <div id="navbar">{/* navigation here */}</div>
+        
         <div id="main-section">
           <Routes>
-            <Route path="/blue" element={<h1>Blue</h1>} />
-            <Route path="/red" element={<h1>Red</h1>} />
+            <Route path="/" element={<h2>This the home page where you get to choose the color that you want!</h2>}/>
+            <Route path="/blue" element={<Blue/>} />
+            <Route path="/red" element={<Red/>} />
           </Routes>
         </div>
       </div>
